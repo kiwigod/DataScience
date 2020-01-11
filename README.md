@@ -32,7 +32,7 @@ In order to get more familiar with Python I worked on a small [side project](htt
 which can later on be used to do simple regression predictions on. The idea is to retrieve as many prices for flights 
 from point A to B. Along with the price the airline and number of transfers can also be taken into account.
 
-ID | Departure time | Arrival time | Departure IATA | Arrival IATA | Airline(s) | Duration (minutes) | Price(EUR) | Transfers | Timestamp 
+ID | Departure time | Arrival time | Departure IATA | Arrival IATA | Airline(s) | Duration (minutes) | Price (EUR) | Transfers | Timestamp 
 --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
 27694 | 2020-04-09 10:35:00 | 2020-04-09 07:15:00 | AMS | ICN | Air France | 820 | 760 | 1 | 2019-12-22 13:30:07
 27693 | 2020-04-09 08:00:00 | 2020-04-09 07:15:00 | AMS | ICN | KLM, Air France | 975 | 705 | 1 | 2019-12-22 13:30:07
@@ -67,4 +67,10 @@ The majority of the initial data conversion is done by [Eddie Versluis](https://
 go into detail about it too much. I did however put the majority of the effort into 
 [converting patient group 4](#ADD LINK) which will be discussed later in this portfolio.
 
+## Reproducing results
+Unlike the other groups we had an already quite promising result created by the group who worked on this project last 
+year. Because of that we decided to do our best to factually and reliably reproduce their results before moving forward.
+This was done by most members of the group individually to really understand what has been done to come to these results.
+
+[My attempt](#ADD LINK) at this is quite fast
 
