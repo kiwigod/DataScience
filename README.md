@@ -32,7 +32,7 @@ In order to get more familiar with Python I worked on a small [side project](htt
 which can later on be used to do simple regression predictions on. The idea is to retrieve as many prices for flights 
 from point A to B. Along with the price the airline and number of transfers can also be taken into account.
 
-id | departure time | arrival time | departure IATA | arrival IATA | Airline(s) | Duration (minutes) | Price(EUR) | transfers | timestamp 
+ID | Departure time | Arrival time | Departure IATA | Arrival IATA | Airline(s) | Duration (minutes) | Price(EUR) | Transfers | Timestamp 
 --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
 27694 | 2020-04-09 10:35:00 | 2020-04-09 07:15:00 | AMS | ICN | Air France | 820 | 760 | 1 | 2019-12-22 13:30:07
 27693 | 2020-04-09 08:00:00 | 2020-04-09 07:15:00 | AMS | ICN | KLM, Air France | 975 | 705 | 1 | 2019-12-22 13:30:07
@@ -62,5 +62,9 @@ this data set we could say with certainty which exercise a patient was performin
 by the project group last year. The only downside to the newly received data set is that we'd have to convert the 
 data ourselves to euler angles in matlab using the provided scripts.
 
-### Labels
- 
+### Conversion
+The majority of the initial data conversion is done by [Eddie Versluis](https://github.com/v3rslu1s/). Therefor I won't 
+go into detail about it too much. I did however put the majority of the effort into 
+[converting patient group 4](#ADD LINK) which will be discussed later in this portfolio.
+
+
