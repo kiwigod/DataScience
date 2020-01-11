@@ -24,9 +24,8 @@ completed assignments will be listed below in order of due date.
 - [Python data science toolbox part 2](resources/datacamp/python_data_science_toolbox_2.pdf)
 - [Cleaning data in python](resources/datacamp/cleaning_data_in_python.pdf)
 - [Python data science toolbox part 1](resources/datacamp/python_data_science_toolbox_1.pdf)
-
-`* Only a few chapters had to be completed in order to compy with the requirements. As such no proof of completeion is 
-awarded. A screenshot of the completed courses is added instead`
+> _* Only a few chapters had to be completed in order to compy with the requirements. As such no proof of completeion is 
+awarded. A screenshot of the completed courses is added instead_
 
 ## Building a foundation
 In order to get more familiar with Python I worked on a small [side project](https://github.com/kiwigod/Flight-Tickets) 
@@ -44,7 +43,7 @@ id | departure time | arrival time | departure IATA | arrival IATA | Airline(s) 
 27688 | 2020-04-09 21:25:00 | 2020-04-09 14:55:00 | AMS | ICN | KLM | 630 | 732 | `null` | 2019-12-22 13:30:07
 27687 | 2020-04-09 21:20:00 | 2020-04-09 15:05:00 | AMS | ICN | Korean Air | 645 | 682 | `null` | 2019-12-22 13:30:07
 27686 | 2020-04-09 08:55:00 | 2020-04-09 05:40:00 | AMS | ICN | Lufthansa | 825 | 472 | 1 | 2019-12-22 13:30:07
-_A few rows from the database the flight info is stored in_
+> _A few rows from the database the flight info is stored in_
 
 As can be observed there's a zero value for transfers in one of the flights. This is just a parse issue that often 
 happens with routes which take a long time to get to their final destination.
@@ -58,9 +57,10 @@ elegantly with the knowledge I've acquired throughout the minor. In the end I di
 relatively cheap flight to South Korea in late March! 
 
 ## Data set
-The data set we received from the LUMC was in a raw format, in other words sensor data.
-This data set was accompanied with several Matlab scripts to convert the sensor data to
-euler angles. The result is a csv file containing 
+After visiting and talking to one of the physicians at the LUMC we left with a new, and better labeled data set. In 
+this data set we could say with certainty which exercise a patient was performing. As opposed to the data set used 
+by the project group last year. The only downside to the newly received data set is that we'd have to convert the 
+data ourselves to euler angles in matlab using the provided scripts.
 
 ### Labels
  
