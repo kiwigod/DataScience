@@ -215,6 +215,16 @@ Commit|Datestamp|Refs|Message
 [b1e559b](https://dev.azure.com/DataScienceMinor/Data%20Science/_git/Data%20Science/commit/b1e559b1467b57433ae9f618ba28168f21683e1d)|2019-09-11||Added requirements; update .gitignore
 [f36edbf](https://dev.azure.com/DataScienceMinor/Data%20Science/_git/Data%20Science/commit/f36edbfcb43619aa3192efd7582e080cdd738591)|2019-09-11||test
 
+## Presentations
+I presented and contributed towards the following presentations
+- [External 1](https://dehaagsehogeschool-my.sharepoint.com/:p:/g/personal/19132565_student_hhs_nl/ETasmawQUflKlnrCcJ2gQSQBvmOvDZmdIikdY7Z9w2wvhQ?e=HApMbH)
+- [Week 11 | 18 November](https://dehaagsehogeschool-my.sharepoint.com/:p:/g/personal/19132565_student_hhs_nl/EWpjZddvGttMgWaJVYdXwGYBeOENDjFWd-1NVSs_gZV22w?e=Qw1ooA)
+- [Week 14 | 16 December](https://dehaagsehogeschool-my.sharepoint.com/:p:/g/personal/19132565_student_hhs_nl/EZZGNqrN6ItMmVBhbVP4W6gBKBtVIwCSFHikUJW7w0yXRA?e=Q5ul5M)
+
+Within the project group we also did a presentation to share knowledge. Which can be found [here](https://dehaagsehogeschool-my.sharepoint.com/:b:/g/personal/19132565_student_hhs_nl/ET85TZN-LUZFsLATVPHWFKUBDPsRSdUpyvANrJlsKRnmdw?e=ZzNBwM).
+My presentation wasn't really in depth about the project, but more or less a overview of what changes we 
+could make in the codebase. The aim was to increase flexibility in the code, and not creating code which 
+is tailored towards one specific use case.
 
 ## Reflections
 I believe a reflection should be confidential and thus not shared on a publicly accessible portfolio. I'll therefor 
