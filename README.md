@@ -46,7 +46,8 @@ ID | Departure time | Arrival time | Departure IATA | Arrival IATA | Airline(s) 
 > _A few rows from the database the flight info is stored in_
 
 As can be observed there's a zero value for transfers in one of the flights. This is just a parse issue that often 
-happens with routes which take a long time to get to their final destination.
+happens with routes which take a long time to get to their final destination. Since I've no interest in those flights 
+I didn't bother looking into the issue.
 
 I've ran the program for over a month every half hour of my laptop's uptime.I do realize now that the data points are 
 quite inconsistent, and the data set could quite likely be improved by running it on a server with more uptime than my 
@@ -57,7 +58,7 @@ elegantly with the knowledge I've acquired throughout the minor. In the end I di
 relatively cheap flight to South Korea in late March! 
 
 ## Data set
-After visiting and talking to one of the physicians at the LUMC we left with a new, and better labeled data set. In 
+After visiting and talking to one of the physicians at the LUMC we left with the same, but better labeled data set. In 
 this data set we could say with certainty which exercise a patient was performing. As opposed to the data set used 
 by the project group last year. The only downside to the newly received data set is that we'd have to convert the 
 data ourselves to euler angles in matlab using the provided scripts.
@@ -205,6 +206,13 @@ showed no sign of being any different than the already converted exercises (anom
 our project, and having more data available is almost always better!
 
 #### Patient group 4
+One of the issues we seemed to be having after the initial data conversion was related to patient group 4. The data 
+within that patient group showed no coherency whatsoever. This was quite strange since the project group of last 
+year didn't seem to be having this issue. The data set stayed the same, minus us having to convert the data ourselves. 
+So we'd expect there to be no issues with this.
+
+Nevertheless we figured since the only real difference between us and them was the data conversion. Thus we started 
+looking for any mistakes we might've made during the conversion process. 
 
 ### Data verification
 
