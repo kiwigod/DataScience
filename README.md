@@ -16,7 +16,7 @@ completed assignments will be listed below in order of due date.
 - [Introduction to python](resources/datacamp/introduction_to_python.pdf)
 - [Introduction and flat files*](resources/datacamp/assignments_overview.png)
 - [Customizing plots](resources/datacamp/introduction_to_data_visualization_with_python.pdf)
-- [Intermediate python for data science](resources/datacamp/intermediata_python_for_data_science.pdf)
+- [Intermediate python for data science](resources/datacamp/intermediate_python_for_data_science.pdf)
 - [Pandas foundations](resources/datacamp/pandas_foundations.pdf)
 - [Writing your own functions](resources/datacamp/python_data_science_toolbox_1.pdf)
 - [Statistical plots with seaborn](resources/datacamp/introduction_to_data_visualization_with_python.pdf)
@@ -24,8 +24,8 @@ completed assignments will be listed below in order of due date.
 - [Python data science toolbox part 2](resources/datacamp/python_data_science_toolbox_2.pdf)
 - [Cleaning data in python](resources/datacamp/cleaning_data_in_python.pdf)
 - [Python data science toolbox part 1](resources/datacamp/python_data_science_toolbox_1.pdf)
-> _* Only a few chapters had to be completed in order to compy with the requirements. As such no proof of completeion is 
-awarded. A screenshot of the completed courses is added instead_
+> _* Only a few chapters had to be completed in order to comply with the requirements. As such no proof of 
+completion is awarded. A screenshot of the completed courses is added instead_
 
 ## Building a foundation
 In order to get more familiar with Python I worked on a small [side project](https://github.com/kiwigod/Flight-Tickets) 
@@ -63,7 +63,7 @@ by the project group last year. The only downside to the newly received data set
 data ourselves to euler angles in matlab using the provided scripts.
 
 ### Conversion
-The majority of the initial data conversion is done by [Eddie Versluis](https://github.com/v3rslu1s/). Therefor I won't 
+The majority of the initial data conversion is done by [Eddie Versluis](https://github.com/v3rslu1s). Therefor I won't 
 go into detail about it too much. I did however put the majority of the effort into 
 [converting patient group 4](#ADD LINK) which will be discussed later in this portfolio.
 
@@ -72,4 +72,7 @@ Unlike the other groups we had an already quite promising result created by the 
 year. Because of that we decided to do our best to factually and reliably reproduce their results before moving forward.
 This was done by most members of the group individually to really understand what has been done to come to these results.
 
-[My attempt](#https://github.com/kiwigod/ortho) at this is quite fast
+[My attempt](https://github.com/kiwigod/ortho) at this is possibly the fastest what's achieved within the current group. 
+The way it's setup generates only one object, exercise, which warehouses all important data. I personally didn't see a 
+need to create multiple objects like patient group and patient, since all this data can be retrieved by looping through 
+the collection which contains these objects.
