@@ -75,4 +75,11 @@ This was done by most members of the group individually to really understand wha
 [My attempt](https://github.com/kiwigod/ortho) at this is possibly the fastest what's achieved within the current group. 
 The way it's setup generates only one object, exercise, which warehouses all important data. I personally didn't see a 
 need to create multiple objects like patient group and patient, since all this data can be retrieved by looping through 
-the collection which contains these objects.
+the collection which contains these objects. For a complete overview of the overview of the data retrieval see the 
+figures below
+
+![load](resources/reproduce_results/load_files.png)
+>_loading the files into memory_
+
+![uml](resources/reproduce_results/load_files_uml.png)
+>_uml diagram of data loading_
