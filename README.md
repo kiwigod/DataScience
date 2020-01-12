@@ -203,7 +203,7 @@ figured it'd be feasible to try.
 
 After trying to do the conversion using the workaround the patients were converted successfully. The output exercises 
 showed no sign of being any different than the already converted exercises (anomalies). We were able to use them in 
-our project, and having more data available is almost always better!
+our project, and having more data available is always better!
 
 #### Patient group 4
 One of the issues we seemed to be having after the initial data conversion was related to patient group 4. The data 
