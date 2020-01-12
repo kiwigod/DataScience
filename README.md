@@ -65,7 +65,7 @@ data ourselves to euler angles in matlab using the provided scripts.
 ### Conversion
 The majority of the initial data conversion is done by [Eddie Versluis](https://github.com/v3rslu1s). Therefor I won't 
 go into detail about it too much. I did however put the majority of the effort into 
-[converting patient group 4](#conversion-of-patient-group-4) which will be discussed later in this portfolio.
+[converting patient group 4](#patient-group-4) which will be discussed later in this portfolio.
 
 ## Reproducing results
 Unlike the other groups we had an already quite promising result created by the group who worked on this project last 
@@ -166,23 +166,53 @@ for example tying shoelaces, drinking from a cup, etc.
 
 These files were excluded from the initial conversion because we weren't sure if we wanted to use them. One argument 
 against using this data could be how the exercise performed isn't "controlled". There's no quality control, because 
-everyone might and probably will do a certain task ever so slightly different, even within one patient group.
+everyone might, and probably will, do a certain task ever so slightly different, even within one patient group.
 
 Nevertheless I altered the Matlab script to take these exercises into account as well. This took a bit of tinkering, 
 mainly because I wanted it to work once and for all without a specific directory structure. I however couldn't get 
 it to work the way I wanted it to without sacrificing other tasks on the sprint, which wasn't worth it.
 
+![Free movement visualization](resources/contributions/free_movement/cat1_pat5.png)
+>_A 2D visualization of all axis belonging to the humerus of patient 5 in category 1_
+
+Through observation of the visualization above we can conclude these exercises are not fit for usage in our approach. 
+Look at the drinking exercises for example, even though it's the same patient, the graphs show wildly different 
+movement. Therefor we haven't made use of these exercises beyond this point.
+
+As stated in the beginning of this paragraph, the ideal scenario would be a patient moving and making a diagnosis. 
+However with what we've determined now it'd be quite difficult to achieve if there are no set of exercises the 
+patient must perform.
+
 #### Skipped patients
+It seemed that during the initial conversion some patient were left out of the conversion. This wasn't intended, thus 
+a bug in the Matlab script. I took the task upon myself to convert these remaining patients and add them to the 
+converted data set.
+
+Initially I tried to just run the script again, because at first glace there was no reason for it to skip over these 
+patients. Sadly this didn't work, and I was forced to try something else. As is apparent by now I'm by no means an 
+expert in Matlab, and I don't intend to be. Instead I created a 
+[workaround](https://github.com/kiwigod/ortho/blob/master/scripts/pat_conv.py) so the Matlab script would pick them up 
+for sure.
+
+The idea behind this script is to create an isolated environment in which the script has no other input than the 
+exercises of one patient. This ensures the Matlab script runs it's course and the results have no influence in the 
+conversion of the next patient. Since i've no prior experience in Matlab I don't know whether that is actually possible. 
+However it's possible in regular programming if a program doesn't reset or discard it's resources properly. Therefor I 
+figured it'd be feasible to try.
+
+After trying to do the conversion using the workaround the patients were converted successfully. The output exercises 
+showed no sign of being any different than the already converted exercises (anomalies). We were able to use them in 
+our project, and having more data available is almost always better!
 
 #### Patient group 4
 
 ### Data verification
 
-### Split
-
 ### Data manager
 
 #### Processors
+
+### Split manager
 
 ### CNN data generation
 
