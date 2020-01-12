@@ -108,24 +108,24 @@ will elaborate further on the contributions I've made towards the project, and h
 In our project we made a distinct division between the raw and converted (euler angle) data. The structure of 
 our data set is as follows
 
->`├── Category_1`
->`│   ├── 1`
->`│   │   ├── AB1.csv`
->`│   │   ├── AB1.txt`
->`│   │   ├── AB2.csv`
->`│   │   ├── AB2.txt`
->`│   │   ├── AF1.csv`
->`│   │   ├── AF1.txt`
->`│   │   ├── AF2.csv`
->`│   │   ├── ...`
->`│   ├── ...`
->`├── ...`
+    ├── Category_1
+    │   ├── 1
+    │   │   ├── AB1.csv
+    │   │   ├── AB1.txt
+    │   │   ├── AB2.csv
+    │   │   ├── AB2.txt
+    │   │   ├── AF1.csv
+    │   │   ├── AF1.txt
+    │   │   ├── AF2.csv
+    │   │   ├── ...
+    │   ├── ...
+    ├── ...
 >_data set structure_
 
->`x y y y`
->`- z z z`
->`- z z z`
->`- z z z`
+    x y y y
+      z z z
+      z z z
+      z z z
 >_formatting of a sensor measurement_
 
 We've stored the raw and converted data in the same place. This is for the sake of simplicity and easy retrieval. We 
