@@ -70,7 +70,9 @@ go into detail about it too much. I did however put the majority of the effort i
 ## Reproducing results
 Unlike the other groups we had an already quite promising result created by the group who worked on this project last 
 year. Because of that we decided to do our best to factually and reliably reproduce their results before moving forward.
-This was done by most members of the group individually to really understand what has been done to come to these results.
+This was done by most members of the group individually to really understand what has been done to come to these 
+results. The only difference between the two project groups is us using the labeled data received from the LUMC, in 
+opposition to them using the unlabeled data set.
 
 [My attempt](https://github.com/kiwigod/ortho) at this is possibly the fastest what's achieved within the current group. 
 The way it's setup generates only one object, exercise, which warehouses all important data. I personally didn't see a 
@@ -78,8 +80,14 @@ need to create multiple objects like patient group and patient, since all this d
 the collection which contains these objects. For a complete overview of the overview of the data retrieval see the 
 figures below
 
-![load](resources/reproduce_results/load_files.png)
+![visual](resources/reproduce_results/load_files.png)
 >_loading the files into memory_
 
 ![uml](resources/reproduce_results/load_files_uml.png)
 >_uml diagram of data loading_
+
+After loading all the data into memory we'd have to prepare it to feed it into a machine learning model. Since we were 
+reproducing a result to verify it's integrity we went the same route for this as the previous group did. This meant 
+picking five data points from the exercise's ndarray for every unique exercise combination, assuming the patient has 
+performed all expected exercises. This will result one or more ndarrays with a length of 650 (samples * sample length * 
+number of exercises = 5 * 26 * 5 = 650).
