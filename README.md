@@ -33,7 +33,7 @@ which can later on be used to do simple regression predictions on. The idea is t
 from point A to B. Along with the price the airline and number of transfers can also be taken into account.
 
 ID | Departure time | Arrival time | Departure IATA | Arrival IATA | Airline(s) | Duration (minutes) | Price (EUR) | Transfers | Timestamp 
---- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+--- | --- | --- | :---: | :---: | --- | :---: | :---: | :---: | ---
 27694 | 2020-04-09 10:35:00 | 2020-04-09 07:15:00 | AMS | ICN | Air France | 820 | 760 | 1 | 2019-12-22 13:30:07
 27693 | 2020-04-09 08:00:00 | 2020-04-09 07:15:00 | AMS | ICN | KLM, Air France | 975 | 705 | 1 | 2019-12-22 13:30:07
 27692 | 2020-04-09 11:55:00 | 2020-04-09 08:20:00 | AMS | ICN | Finnair | 805 | 675 | 1 | 2019-12-22 13:30:07
@@ -72,5 +72,4 @@ Unlike the other groups we had an already quite promising result created by the 
 year. Because of that we decided to do our best to factually and reliably reproduce their results before moving forward.
 This was done by most members of the group individually to really understand what has been done to come to these results.
 
-[My attempt](#ADD LINK) at this is quite fast
-
+[My attempt](#https://github.com/kiwigod/ortho) at this is quite fast
