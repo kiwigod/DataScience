@@ -105,14 +105,63 @@ We've tried several ideas and techniques to improve the results of the machine l
 will elaborate further on the contributions I've made towards the project, and how they impacted the final product. 
 
 ### Raw data
+In our project we made a distinct division between the raw and converted (euler angle) data. The structure of 
+our data set is as follows
+
+>`├── Category_1`
+>`│   ├── 1`
+>`│   │   ├── AB1.csv`
+>`│   │   ├── AB1.txt`
+>`│   │   ├── AB2.csv`
+>`│   │   ├── AB2.txt`
+>`│   │   ├── AF1.csv`
+>`│   │   ├── AF1.txt`
+>`│   │   ├── AF2.csv`
+>`│   │   ├── ...`
+>`│   ├── ...`
+>`├── ...`
+>_data set structure_
+
+>`x y y y`
+>`- z z z`
+>`- z z z`
+>`- z z z`
+>_formatting of a sensor measurement_
+
+We've stored the raw and converted data in the same place. This is for the sake of simplicity and easy retrieval. We 
+still use the raw data for visualizing the patient's movement. My contributions towards the visualizations was quite 
+minimal, apart from offering help when someone was stuck. I did save the absolute path to the raw data files in their 
+respective 'Exercise' object.
 
 ### Data conversion
+As stated earlier the data we received from the LUMC was raw sensor data output from the flock of birds sensor. This 
+data still had to be converted to euler angels by us for them to be useful in our application. To do this I created a 
+virtual machine running Ubuntu 19.10. During installation I opted for the minimal application option. Afterwards I 
+installed "Matlab R2019b", created a shared folder for data conversion, which completed the setup for the data 
+conversion.
+
+#### Matlab script
+The first thing I had to do was understand how the matlab script operated. Since I never worked with matlab it was 
+quite challenging. Eventually I figured out that most of the relevant processing is done within a file called 
+"dat2m_FV.m". This file calibrates the sensor data against a predefined calibration file. This calibration file 
+is dependant on the room in which the system is located.
+
+It seems there are two calibration files, presumably the flock of birds system was moved at some point. However 
+we only received one calibration file. This could pose a problem since we don't know when the recordings of our data 
+were made. We tried to contact the LUMC about this, but to no avail, they weren't able to clear this up. Thus we had 
+to assume that the calibration file we received was the correct one. 
+
+Furthermore when applying the calibration both the sensor data and calibration file must be presented in the same 
+measurement unit. Because the calibration file is a static variable the script converts the sensor data from 
+millimeters to inches — the measurement unit used in the calibration file. 
+
+At the end of the script there's a flag which is enabled under conditions which aren't clear to me. Either way 
+when this flag is enabled dummy data is filled for the sensors which aren't recorded. This sounds pretty strange 
+to me, since it introduces variables which cannot be accounted for.
 
 #### Free movement exercises
 
 #### Skipped patients
-
-#### Matlab script
 
 #### Patient group 4
 
@@ -216,7 +265,7 @@ Commit|Datestamp|Refs|Message
 [f36edbf](https://dev.azure.com/DataScienceMinor/Data%20Science/_git/Data%20Science/commit/f36edbfcb43619aa3192efd7582e080cdd738591)|2019-09-11||test
 
 ## Presentations
-I presented and contributed towards the following presentations
+I presented and/or contributed towards the following presentations
 - [External 1](https://dehaagsehogeschool-my.sharepoint.com/:p:/g/personal/19132565_student_hhs_nl/ETasmawQUflKlnrCcJ2gQSQBvmOvDZmdIikdY7Z9w2wvhQ?e=HApMbH)
 - [Week 11 | 18 November](https://dehaagsehogeschool-my.sharepoint.com/:p:/g/personal/19132565_student_hhs_nl/EWpjZddvGttMgWaJVYdXwGYBeOENDjFWd-1NVSs_gZV22w?e=Qw1ooA)
 - [Week 14 | 16 December](https://dehaagsehogeschool-my.sharepoint.com/:p:/g/personal/19132565_student_hhs_nl/EZZGNqrN6ItMmVBhbVP4W6gBKBtVIwCSFHikUJW7w0yXRA?e=Q5ul5M)
