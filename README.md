@@ -96,10 +96,40 @@ Finally the data can be split into a train and test set, and fed to the model. T
 not longer than a minute. The results were in line with what we'd expect, however not as good as achieved by the 
 project group from last year.
 
+In verdict my approach in reproducing the results might have been the fastest, but it wasn't well understood by my 
+peers with less computer programming experience. Therefor we decided to use a peer's project as base to build upon. 
+His was easier to understand and produced results just as good.
+
 ## Contributions
 We've tried several ideas and techniques to improve the results of the machine learning model. In this chapter I 
 will elaborate further on the contributions I've made towards the project, and how they impacted the final product. 
 
-### Processors
+### Free movement exercises
 
-### Conversion of patient group 4
+### Raw data
+
+### Data conversion
+
+#### Skipped patients
+
+#### Matlab script
+
+#### Patient group 4
+
+### Data verification
+
+### Split
+
+### Data manager
+
+#### Processors
+
+### CNN data generation
+
+## Proof of contributions
+The proof on contributions in generated using `git log --author='yuqi' --all`. I believe most of my contributions are 
+committed from my own machine. Thus back traceable using the command above.
+
+## Reflections
+I believe a reflection should be confidential and thus not shared on a publicly accessible portfolio. I'll therefor 
+add them as an attachment when handing in the portfolio.
