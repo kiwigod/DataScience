@@ -160,6 +160,17 @@ when this flag is enabled dummy data is filled for the sensors which aren't reco
 to me, since it introduces variables which cannot be accounted for.
 
 #### Free movement exercises
+In an ideal scenario the patient should freely move and the system gives a diagnostic of which category he/she 
+belongs in. The data we received from the LUMC did contain some exercises which could be considered "free movement", 
+for example tying shoelaces, drinking from a cup, etc.
+
+These files were excluded from the initial conversion because we weren't sure if we wanted to use them. One argument 
+against using this data could be how the exercise performed isn't "controlled". There's no quality control, because 
+everyone might and probably will do a certain task ever so slightly different, even within one patient group.
+
+Nevertheless I altered the Matlab script to take these exercises into account as well. This took a bit of tinkering, 
+mainly because I wanted it to work once and for all without a specific directory structure. I however couldn't get 
+it to work the way I wanted it to without sacrificing other tasks on the sprint, which wasn't worth it.
 
 #### Skipped patients
 
