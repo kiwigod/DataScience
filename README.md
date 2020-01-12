@@ -65,7 +65,7 @@ data ourselves to euler angles in matlab using the provided scripts.
 ### Conversion
 The majority of the initial data conversion is done by [Eddie Versluis](https://github.com/v3rslu1s). Therefor I won't 
 go into detail about it too much. I did however put the majority of the effort into 
-[converting patient group 4](#ADD LINK) which will be discussed later in this portfolio.
+[converting patient group 4](#conversion-of-patient-group-4) which will be discussed later in this portfolio.
 
 ## Reproducing results
 Unlike the other groups we had an already quite promising result created by the group who worked on this project last 
@@ -91,3 +91,15 @@ reproducing a result to verify it's integrity we went the same route for this as
 picking five data points from the exercise's ndarray for every unique exercise combination, assuming the patient has 
 performed all expected exercises. This will result one or more ndarrays with a length of 650 (samples * sample length * 
 number of exercises = 5 * 26 * 5 = 650).
+
+Finally the data can be split into a train and test set, and fed to the model. Training of the model took on average 
+not longer than a minute. The results were in line with what we'd expect, however not as good as achieved by the 
+project group from last year.
+
+## Contributions
+We've tried several ideas and techniques to improve the results of the machine learning model. In this chapter I 
+will elaborate further on the contributions I've made towards the project, and how they impacted the final product. 
+
+### Processors
+
+### Conversion of patient group 4
