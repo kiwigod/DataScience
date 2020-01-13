@@ -134,14 +134,14 @@ still use the raw data for visualizing the patient's movement. My contributions 
 minimal, apart from offering help when someone was stuck. I did save the absolute path to the raw data files in their 
 respective 'Exercise' object.
 
-### Data conversion
+## Data conversion
 As stated earlier the data we received from the LUMC was raw sensor data output from the flock of birds sensor. This 
 data still had to be converted to euler angels by us for them to be useful in our application. To do this I created a 
 virtual machine running Ubuntu 19.10. During installation I opted for the minimal application option. Afterwards I 
 installed "Matlab R2019b", created a shared folder for data conversion, which completed the setup for the data 
 conversion.
 
-#### Matlab script
+### Matlab script
 The first thing I had to do was understand how the matlab script operated. Since I never worked with matlab it was 
 quite challenging. Eventually I figured out that most of the relevant processing is done within a file called 
 "dat2m_FV.m". This file calibrates the sensor data against a predefined calibration file. This calibration file 
@@ -160,7 +160,7 @@ At the end of the script there's a flag which is enabled under conditions which 
 when this flag is enabled dummy data is filled for the sensors which aren't recorded. This sounds pretty strange 
 to me, since it introduces variables which cannot be accounted for.
 
-#### Free movement exercises
+### Free movement exercises
 In an ideal scenario the patient should freely move and the system gives a diagnostic of which category he/she 
 belongs in. The data we received from the LUMC did contain some exercises which could be considered "free movement", 
 for example tying shoelaces, drinking from a cup, etc.
@@ -184,7 +184,7 @@ As stated in the beginning of this paragraph, the ideal scenario would be a pati
 However with what we've determined now it'd be quite difficult to achieve if there are no set of exercises the 
 patient must perform.
 
-#### Skipped patients
+### Skipped patients
 It seemed that during the initial conversion some patient were left out of the conversion. This wasn't intended, thus 
 a bug in the Matlab script. I took the task upon myself to convert these remaining patients and add them to the 
 converted data set.
@@ -205,7 +205,7 @@ After trying to do the conversion using the workaround the patients were convert
 showed no sign of being any different than the already converted exercises (anomalies). We were able to use them in 
 our project, and having more data available is always better!
 
-#### Patient group 4
+### Patient group 4
 One of the issues we seemed to be having after the initial data conversion was related to patient group 4. The data 
 within that patient group showed no coherency whatsoever. This was quite strange since the project group of last 
 year didn't seem to be having this issue. The data set stayed the same, minus us having to convert the data ourselves. 
@@ -213,6 +213,48 @@ So we'd expect there to be no issues with this.
 
 Nevertheless we figured since the only real difference between us and them was the data conversion. Thus we started 
 looking for any mistakes we might've made during the conversion process. 
+
+#### Different measurement units
+The first problem we encountered was how different the sensor data for patient group 4 was compared to the rest of the 
+patient groups.
+
+    2     33.54   -8.07   22.75
+          0.555   0.830   -0.047
+         -0.832   0.553   -0.033
+         -0.001   0.057   0.998
+>_Patient group 4, patient 22, exercise AB; First sensor data sample_
+
+    2   704.55   -23.66   567.04  
+          0.07    -1.00    -0.02  
+          1.00     0.07     0.01  
+         -0.01    -0.03     1.00
+>_Patient group 2, patient 22, exercise AB; First sensor data sample_
+
+From the data samples we can observe that the [y values](#raw-data)(see formatting of a sensor measurement) have a 
+huge difference which we cannot explain. We believe this might be due to the sensor measurement of patient group 4 
+being in inches, compared to millimeters in the other patient groups.
+
+This suspicion can be further confirmed by looking into the calibration function. In here a unit conversion is being 
+executed to convert millimeters to inches, along with several comments which indicate that there used to be sensor 
+data measured in inches.
+
+```matlab
+%{
+    Input uit FoBVis in mm ipv inch!
+    Convert positions from inches to millimeters
+}%
+for i=1:4:size(data,1)
+    data(i,2:4) = data(i,2:4) * inch;
+end
+```
+
+#### Calibration file
+Due to the data possibly being from an older set, we figured it could be possible that a different calibration file 
+had to be used in order to correctly convert these data sets. We contacted the LUMC about this issue however we didn't 
+get a response, and didn't pursue an answer since it wasn't our main priority. The formatting of the file, nor it's 
+contents do not matter in this case, therefor won't be included.
+
+#### Dummy data
 
 ### Data verification
 
