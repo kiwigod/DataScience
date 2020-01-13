@@ -211,6 +211,8 @@ within that patient group showed no coherency whatsoever. This was quite strange
 year didn't seem to be having this issue. The data set stayed the same, minus us having to convert the data ourselves. 
 So we'd expect there to be no issues with this.
 
+# INSERT TSNE PLOT W/O CONVERSION PATCH
+
 Nevertheless we figured since the only real difference between us and them was the data conversion. Thus we started 
 looking for any mistakes we might've made during the conversion process. 
 
@@ -255,8 +257,20 @@ get a response, and didn't pursue an answer since it wasn't our main priority. T
 contents do not matter in this case, therefor won't be included.
 
 #### Dummy data
+When it appears that certain sensors are missing from the raw data set dummy data will be added to the conversion 
+output. This is obviously not ideal, since it introduces variables we cannot account for. The values are truly random 
+thus are of almost no use, and only cause confusion. When disabling this flag, along with changes for the measurement 
+unit. The following tsne plot can be created.
+
+# INSERT TSNE PATCHED PLOT
 
 ### Data verification
+We verified the converted data by looking for one of the converted data samples in the old data set. This was possible 
+for patient groups 1 through 3. However we failed to do this successfully on patient group 4.
+
+Using this method we can confirm that even though it looks like we fixed the conversion problem in a way. It wasn't the 
+correct way and we still need the help from the LUMC. This will however fall outside of our project, and will have to 
+be possibly picked up by the next project group.
 
 ### Data manager
 
