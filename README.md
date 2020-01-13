@@ -2,7 +2,16 @@
 Arjun Sardjoe Missier - 15052907
 
 ## Introduction
-This portfolio describes my achievements as well as my contributions towards the project 
+This portfolio describes my achievements as well as my contributions towards the project. 
+
+The project in question is the ortho eyes project within the minor data science 19/20. During this minor we will 
+create a classifier to diagnose in which category a patient's shoulder disability should be placed. This project 
+will be fulfilled in a group of seven students working together with the LUMC. They are looking for a product 
+to assist their physicians in diagnosing these shoulder disabilities. Furthermore they've provided the data set 
+on which we're training and generating predictions.
+
+Based on this information we formed our research question to be as follows 
+>_"To what extend and in what way, can different supervised data science techniques be used on kinematic recordings to contribute to a more valid and more reliable diagnosis, made by a doctor, on shoulder disability."_
 
 ## Table of contents
 - [Datacamp](#datacamp)
@@ -310,6 +319,19 @@ following is possible:
 This solved the issue of not being able to dynamically specify the test and train set.
 
 ### CNN data generation
+
+## Results
+    "Accuracy": 0.6959537572254335,
+    "LogLoss": 1.3907477784842843,
+    "MCC": 0.592299585950794,
+    "RMSE": 0.5514038835323583,
+    "RMSLE": 0.16069798344358133
+
+These are the evaluation metrics for the [best configuration](resources\results\conf.json) ran.
+
+## Evaluation
+
+## Conclusion
 
 ## Recommendations
 
