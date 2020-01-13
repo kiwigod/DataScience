@@ -273,8 +273,28 @@ correct way and we still need the help from the LUMC. This will however fall out
 be possibly picked up by the next project group.
 
 ### Data manager
+To be able to run multiple setups of our data like: 
+- calculate possible combinations between exercises
+- resample to a fixed length
+- prepare the data for machine learning
+
+I've created a so called data manager. The idea is to first apply all our data enrichment (remove idle before and after
+an exercise, etc.), and then prepare the data as follow.
+
+![data manager flow](resources/contributions/managers/data/data_manager.png)
+>_Data flow of the data manager_
+
+![data manger uml](resources/contributions/managers/data/data_manager_uml.png)
+>_UML diagram of the data manger_
+
+This solved the issue of not being able to run multiple configurations one after the other. After creating this we were 
+able to run multiple configurations and figure out which one results in the best.
 
 #### Processors
+By interpreting the UML diagram above we see the processor is really just an interface, with multiple implementations. 
+Each of these implementations is unique in its own way, and each deliver a different result. All of them can be chained 
+although running the same processor multiple times is kind of pointless. The only caveat is the combination processor. 
+This processor needs to be run before all others to ensure the data is grouped properly.
 
 ### Split manager
 
