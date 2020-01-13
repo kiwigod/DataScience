@@ -278,8 +278,8 @@ To be able to run multiple setups of our data like:
 - resample to a fixed length
 - prepare the data for machine learning
 
-I've created a so called data manager. The idea is to first apply all our data enrichment (remove idle before and after
-an exercise, etc.), and then prepare the data as follow.
+I've created a so called [data manager](resources/contributions/managers/data/source/data.py). The idea is to first 
+apply all our data enrichment (remove idle before and after an exercise, etc.), and then prepare the data as follow.
 
 ![data manager flow](resources/contributions/managers/data/data_manager.png)
 >_Data flow of the data manager_
@@ -291,12 +291,23 @@ This solved the issue of not being able to run multiple configurations one after
 able to run multiple configurations and figure out which one results in the best.
 
 #### Processors
-By interpreting the UML diagram above we see the processor is really just an interface, with multiple implementations. 
-Each of these implementations is unique in its own way, and each deliver a different result. All of them can be chained 
-although running the same processor multiple times is kind of pointless. The only caveat is the combination processor. 
-This processor needs to be run before all others to ensure the data is grouped properly.
+By interpreting the UML diagram above we see the 
+[processor is really just an interface](resources/contributions/managers/data/source/processor_interface.py), with 
+multiple implementations. Each of these implementations is unique in its own way, and each deliver a different result. 
+All of them can be chained although running the same processor multiple times is kind of pointless. The only caveat is 
+the combination processor. This processor needs to be run before all others to ensure the data is grouped properly.
 
 ### Split manager
+Along with the data manager a [split manager](resources/contributions/managers/test/source/train_test.py) was created. 
+This manager ensures we create a proper train and test split in as many ways as possible. With this manager the 
+following is possible:
+- Create a split based on the patient ids within a specified patient group.
+- Create a percentage based split. The configuration being ran should specify the ratio between train and test. 
+- Create a validation set, this will take samples from the train set.
+- Create training batches for partial learning, useful for neural networks.
+- Shuffle the train and test data
+
+This solved the issue of not being able to dynamically specify the test and train set.
 
 ### CNN data generation
 
@@ -388,6 +399,30 @@ Commit|Datestamp|Refs|Message
 [1794f3e](https://dev.azure.com/DataScienceMinor/Data%20Science/_git/Data%20Science/commit/1794f3e735c662f80630abeb07f6dfec4f271204)|2019-09-18||Added support vector classification
 [b1e559b](https://dev.azure.com/DataScienceMinor/Data%20Science/_git/Data%20Science/commit/b1e559b1467b57433ae9f618ba28168f21683e1d)|2019-09-11||Added requirements; update .gitignore
 [f36edbf](https://dev.azure.com/DataScienceMinor/Data%20Science/_git/Data%20Science/commit/f36edbfcb43619aa3192efd7582e080cdd738591)|2019-09-11||test
+
+---
+
+Furthermore the tasks assigned to me on the scrum board can be found below
+
+ID|Title|State|Area Path|Comment Count|Changed Date
+---|---|---|---|---|---
+188|FoB: Conversion of data|Doing|Data Science|0|Sun Jan 12 2020 14:42:58Z
+139|Is the patientgroup 4 converted correctly?|Done|Data Science|0|Sun Jan 12 2020 14:42:52Z
+187|FoB: Use existing papers to explain FoB|Doing|Data Science|0|Fri Jan 10 2020 12:38:00Z
+192|dataframe cnn|Done|Data Science|0|Fri Dec 20 2019 10:37:28Z
+25|Read Paper|Done|Data Science|0|Mon Dec 16 2019 14:18:00Z
+159|Creating a split between train/test/validation|Done|Data Science|0|Mon Dec 09 2019 12:29:57Z
+161|Batching for (recurrent) neural networks|Done|Data Science|0|Mon Dec 09 2019 12:27:17Z
+143|t-SNE old data|Done|Data Science|0|Wed Dec 04 2019 17:21:39Z
+160|Shuffeling our data-set|Done|Data Science|0|Tue Dec 03 2019 16:22:38Z
+146|Datamanager|Done|Data Science|0|Wed Nov 27 2019 13:22:20Z
+150|Automaticly Split test/train |Done|Data Science|1|Tue Nov 26 2019 13:20:21Z
+136|Check if you can use both standard and free movement exercises for machine learning|Done|Data Science|2|Thu Nov 14 2019 15:33:13Z
+138|Save location of raw data in the meta data|Done|Data Science|2|Wed Nov 13 2019 12:06:32Z
+140|Try to convert the remaining patients|Done|Data Science|0|Mon Nov 11 2019 12:00:15Z
+142|Review matlab script|Done|Data Science|0|Mon Nov 11 2019 10:41:11Z
+112|Cross joining patients|To Do|Data Science|0|Tue Oct 15 2019 14:10:06Z
+14|Arjun|Done|Data Science|0|Fri Sep 06 2019 14:01:37Z
 
 ## Presentations
 I presented and/or contributed towards the following presentations
