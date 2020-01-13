@@ -311,6 +311,8 @@ This solved the issue of not being able to dynamically specify the test and trai
 
 ### CNN data generation
 
+## Recommendations
+
 ## Proof of contributions
 The proof on contributions in generated using `git log --author='yuqi' --all`. I believe most of my contributions are 
 committed from my own machine. Thus back traceable using the command above.
