@@ -330,11 +330,15 @@ This solved the issue of not being able to dynamically specify the test and trai
 LALALAY
 
 ## Results
+```python
+{
     "Accuracy": 0.6959537572254335,
     "LogLoss": 1.3907477784842843,
     "MCC": 0.592299585950794,
     "RMSE": 0.5514038835323583,
     "RMSLE": 0.16069798344358133
+}
+```
 
 These are the evaluation metrics for the [best configuration](resources\results\conf.json) ran.
 
@@ -345,8 +349,8 @@ to categorize the exercises themselves.
 
 Assuming no changes are made in the way recordings are made, thus keeping the flock of birds system around. A 
 suggestion could be to further expand upon the convolutional neural network (cnn). We've had some promising results 
-with this, but weren't able to fully utilize it; The results weren't optimal yet. The layers of the model could 
-quite likely be improved to increase it's reliability.
+with this, but weren't able to fully utilize it; The layers of the model weren't optimal yet. Fixing this issue could 
+quite likely improve it's accuracy, making it more useable in a real world scenario.
 
 If one would were to make new recordings there are multiple possibilities. One of these possibilities could be 
 using the kinect camera again. Microsoft has announced and released a new iteration of this last year (2019) which 
