@@ -10,12 +10,11 @@ will be fulfilled in a group of seven students working together with the LUMC. T
 to assist their physicians in diagnosing these shoulder disabilities. Furthermore they've provided the data set 
 on which we're training and generating predictions.
 
-Based on this information we formed our research question to be as follows 
+Based on this information we formulated our research question to be as follows 
 >_"To what extend and in what way, can different supervised data science techniques be used on kinematic recordings to contribute to a more valid and more reliable diagnosis, made by a doctor, on shoulder disability."_
 
 ## Table of contents
 - [Datacamp](#datacamp)
-- [Getting familiar with Python](#building-a-foundation)
 - [Data set](#data-set)
     - [labels](#labels)
 
@@ -35,36 +34,6 @@ completed assignments will be listed below in order of due date.
 - [Python data science toolbox part 1](resources/datacamp/python_data_science_toolbox_1.pdf)
 > _* Only a few chapters had to be completed in order to comply with the requirements. As such no proof of 
 completion is awarded. A screenshot of the completed courses is added instead_
-
-## Building a foundation
-In order to get more familiar with Python I worked on a small [side project](https://github.com/kiwigod/Flight-Tickets) 
-which can later on be used to do simple regression predictions on. The idea is to retrieve as many prices for flights 
-from point A to B. Along with the price the airline and number of transfers can also be taken into account.
-
-ID | Departure time | Arrival time | Departure IATA | Arrival IATA | Airline(s) | Duration (minutes) | Price (EUR) | Transfers | Timestamp 
---- | --- | --- | :---: | :---: | --- | :---: | :---: | :---: | ---
-27694 | 2020-04-09 10:35:00 | 2020-04-09 07:15:00 | AMS | ICN | Air France | 820 | 760 | 1 | 2019-12-22 13:30:07
-27693 | 2020-04-09 08:00:00 | 2020-04-09 07:15:00 | AMS | ICN | KLM, Air France | 975 | 705 | 1 | 2019-12-22 13:30:07
-27692 | 2020-04-09 11:55:00 | 2020-04-09 08:20:00 | AMS | ICN | Finnair | 805 | 675 | 1 | 2019-12-22 13:30:07
-27691 | 2020-04-09 09:45:00 | 2020-04-09 13:45:00 | AMS | ICN | SWISS, Asiana | 1260 | 568 | 0 | 2019-12-22 13:30:07
-27690 | 2020-04-09 14:50:00 | 2020-04-09 11:25:00 | AMS | ICN | Lufthansa | 815 | 478 | 1 | 2019-12-22 13:30:07
-27689 | 2020-04-09 14:40:00 | 2020-04-09 12:55:00 | AMS | ICN | Turkish Airlines | 915 | 472 | 1 | 2019-12-22 13:30:07
-27688 | 2020-04-09 21:25:00 | 2020-04-09 14:55:00 | AMS | ICN | KLM | 630 | 732 | `null` | 2019-12-22 13:30:07
-27687 | 2020-04-09 21:20:00 | 2020-04-09 15:05:00 | AMS | ICN | Korean Air | 645 | 682 | `null` | 2019-12-22 13:30:07
-27686 | 2020-04-09 08:55:00 | 2020-04-09 05:40:00 | AMS | ICN | Lufthansa | 825 | 472 | 1 | 2019-12-22 13:30:07
-> _A few rows from the database the flight info is stored in_
-
-As can be observed there's a zero value for transfers in one of the flights. This is just a parse issue that often 
-happens with routes which take a long time to get to their final destination. Since I've no interest in those flights 
-I didn't bother looking into the issue.
-
-I've ran the program for over a month every half hour of my laptop's uptime.I do realize now that the data points are 
-quite inconsistent, and the data set could quite likely be improved by running it on a server with more uptime than my 
-local machine. However since this was just to build some familiarity with Python I decided to just leave it as is.
-
-I've learned quite a bit about Python by building this, and do see some things which could've been solved or built more 
-elegantly with the knowledge I've acquired throughout the minor. In the end I did use the project to find and book a 
-relatively cheap flight to South Korea in late March! 
 
 ## Data set
 After visiting and talking to one of the physicians at the LUMC we left with the same, but better labeled data set. In 
@@ -112,9 +81,7 @@ Where 'x' is the sensor number, 'y' is a static value per patient, and 'z' forms
 the patient's movement.
 
 We've stored the raw and converted data in the same place. This is for the sake of simplicity and easy retrieval. We 
-still use the raw data for visualizing the patient's movement. SHOULD REMOVE[My contributions towards the visualizations 
-was quite minimal, apart from offering help when someone was stuck. I did save the absolute path to the raw data files 
-in their respective 'Exercise' object.]
+still use the raw data for visualizing the patient's movement.
 
 ### Conversion
 The majority of the initial data conversion is done by [Eddie Versluis](https://github.com/v3rslu1s). Therefor I won't 
@@ -250,10 +217,17 @@ within that patient group showed no coherency whatsoever. This was quite strange
 year didn't seem to be having this issue. The data set stayed the same, minus us having to convert the data ourselves. 
 So we'd expect there to be no issues with this.
 
-# INSERT TSNE PLOT W/O CONVERSION PATCH
+![tsne plot 1-4](resources/contributions/pat_conversion/cat4_initial.png)
+>_tsne plot category 1-4 newly converted data_
 
-Nevertheless we figured since the only real difference between us and them was the data conversion. Thus we started 
-looking for any mistakes we might've made during the conversion process. 
+![tsne plot 1-3](resources/contributions/pat_conversion/cat1-3.png)
+>_tsne plot category 1-3 newly converted data_
+
+![tsne plot 1-4](resources/contributions/pat_conversion/cat1-4_old.png)
+>_tsne plot category 1-4 data used by project group of last year_
+
+Using the figures above we can conclude that patient group is indeed the problem. This problem was not found in the 
+old data set. Therefor we started looking into any mistakes we might have made during the conversion process.
 
 #### Different measurement units
 The first problem we encountered was how different the sensor data for patient group 4 was compared to the rest of the 
@@ -301,7 +275,10 @@ output. This is obviously not ideal, since it introduces variables we cannot acc
 thus are of almost no use, and only cause confusion. When disabling this flag, along with changes for the measurement 
 unit. The following tsne plot can be created.
 
-# INSERT TSNE PATCHED PLOT
+![patched tsne plot 1-4](resources/contributions/pat_conversion/cat4_conv.png)
+
+From this we can conclude that the problem we're facing is indeed in the conversion process. Since the different 
+data points are packed closer together now.
 
 ### Data verification
 We verified the converted data by looking for one of the converted data samples in the old data set. This was possible 
@@ -365,7 +342,7 @@ LALALAY
 }
 ```
 
-These are the evaluation metrics for the [best configuration](resources\results\conf.json) ran.
+These are the evaluation metrics for the [best configuration](resources/results/conf.json) ran.
 
 ## Evaluation
 In the end I believe we did well. We managed to create an approach which is based on factual data provided by the 
@@ -375,7 +352,7 @@ to categorize the exercises themselves.
 Assuming no changes are made in the way recordings are made, thus keeping the flock of birds system around. A 
 suggestion could be to further expand upon the convolutional neural network (cnn). We've had some promising results 
 with this, but weren't able to fully utilize it; The layers of the model weren't optimal yet. Fixing this issue could 
-quite likely improve it's accuracy, making it more useable in a real world scenario.
+quite likely improve it's accuracy, making it more usable in a real world scenario.
 
 If one would were to make new recordings there are multiple possibilities. One of these possibilities could be 
 using the kinect camera again. Microsoft has announced and released a new iteration of this last year (2019) which 
@@ -384,7 +361,7 @@ of the most non-intrusive ways to determine the severity of a patient's shoulder
 features an anatomically correct skeleton for each partial or full body in FOV. This means data similar to what 
 is currently being recorded in the LUMC using the flock of birds system should be recordable using this approach as well.
 
-![Azue kinect sdk](resources\evaluation\azue_kinect_dk.jpg)
+![Azure kinect sdk](resources/evaluation/azure_kinect_dk.jpg)
 
 ## Conclusion
 
