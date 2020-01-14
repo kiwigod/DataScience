@@ -350,8 +350,10 @@ quite likely be improved to increase it's reliability.
 
 If one would were to make new recordings there are multiple possibilities. One of these possibilities could be 
 using the kinect camera again. Microsoft has announced and released a new iteration of this last year (2019) which 
-features body tracking among other improvements. This would be ideal within our application and one of the most 
-non-intrusive ways to determine the severity of a patient's shoulder disability.
+features body tracking among other improvements, called Azure kinect. This would be ideal within our application and one 
+of the most non-intrusive ways to determine the severity of a patient's shoulder disability. The body tracking sdk 
+features an anatomically correct skeleton for each partial or full body in FOV. This means data similar to what 
+is currently being recorded in the LUMC using the flock of birds system should be recordable using this approach as well.
 
 ![Azue kinect sdk](resources\evaluation\azue_kinect_dk.jpg)
 
