@@ -10,7 +10,7 @@ will be fulfilled in a group of seven students working together with the LUMC. T
 to assist their physicians in diagnosing these shoulder disabilities. Furthermore they've provided the data set 
 on which we're training and generating predictions.
 
-Based on this information we formed our research question to be as follows 
+Based on this information we formulated our research question to be as follows 
 >_"To what extend and in what way, can different supervised data science techniques be used on kinematic recordings to contribute to a more valid and more reliable diagnosis, made by a doctor, on shoulder disability."_
 
 ## Table of contents
@@ -81,9 +81,7 @@ Where 'x' is the sensor number, 'y' is a static value per patient, and 'z' forms
 the patient's movement.
 
 We've stored the raw and converted data in the same place. This is for the sake of simplicity and easy retrieval. We 
-still use the raw data for visualizing the patient's movement. SHOULD REMOVE[My contributions towards the visualizations 
-was quite minimal, apart from offering help when someone was stuck. I did save the absolute path to the raw data files 
-in their respective 'Exercise' object.]
+still use the raw data for visualizing the patient's movement.
 
 ### Conversion
 The majority of the initial data conversion is done by [Eddie Versluis](https://github.com/v3rslu1s). Therefor I won't 
@@ -219,10 +217,17 @@ within that patient group showed no coherency whatsoever. This was quite strange
 year didn't seem to be having this issue. The data set stayed the same, minus us having to convert the data ourselves. 
 So we'd expect there to be no issues with this.
 
-# INSERT TSNE PLOT W/O CONVERSION PATCH
+![tsne plot 1-4](resources/contributions/pat_conversion/cat4_initial.png)
+>_tsne plot category 1-4 newly converted data_
 
-Nevertheless we figured since the only real difference between us and them was the data conversion. Thus we started 
-looking for any mistakes we might've made during the conversion process. 
+![tsne plot 1-3](resources/contributions/pat_conversion/cat1-3.png)
+>_tsne plot category 1-3 newly converted data_
+
+![tsne plot 1-4](resources/contributions/pat_conversion/cat1-4_old.png)
+>_tsne plot category 1-4 data used by project group of last year_
+
+Using the figures above we can conclude that patient group is indeed the problem. This problem was not found in the 
+old data set. Therefor we started looking into any mistakes we might have made during the conversion process.
 
 #### Different measurement units
 The first problem we encountered was how different the sensor data for patient group 4 was compared to the rest of the 
@@ -270,7 +275,10 @@ output. This is obviously not ideal, since it introduces variables we cannot acc
 thus are of almost no use, and only cause confusion. When disabling this flag, along with changes for the measurement 
 unit. The following tsne plot can be created.
 
-# INSERT TSNE PATCHED PLOT
+![patched tsne plot 1-4](resources/contributions/pat_conversion/cat4_conv.png)
+
+From this we can conclude that the problem we're facing is indeed in the conversion process. Since the different 
+data points are packed closer together now.
 
 ### Data verification
 We verified the converted data by looking for one of the converted data samples in the old data set. This was possible 
@@ -341,7 +349,7 @@ to categorize the exercises themselves.
 Assuming no changes are made in the way recordings are made, thus keeping the flock of birds system around. A 
 suggestion could be to further expand upon the convolutional neural network (cnn). We've had some promising results 
 with this, but weren't able to fully utilize it; The layers of the model weren't optimal yet. Fixing this issue could 
-quite likely improve it's accuracy, making it more useable in a real world scenario.
+quite likely improve it's accuracy, making it more usable in a real world scenario.
 
 If one would were to make new recordings there are multiple possibilities. One of these possibilities could be 
 using the kinect camera again. Microsoft has announced and released a new iteration of this last year (2019) which 
