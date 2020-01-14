@@ -72,10 +72,44 @@ this data set we could say with certainty which exercise a patient was performin
 by the project group last year. The only downside to the newly received data set is that we'd have to convert the 
 data ourselves to euler angles in matlab using the provided scripts.
 
+### Raw data
+In our project we made a distinct division between the raw and converted (euler angle) data. The structure of 
+our data set is as follows
+
+    ├── Category_1
+    │   ├── 1
+    │   │   ├── AB1.csv
+    │   │   ├── AB1.txt
+    │   │   ├── AB2.csv
+    │   │   ├── AB2.txt
+    │   │   ├── AF1.csv
+    │   │   ├── AF1.txt
+    │   │   ├── AF2.csv
+    │   │   ├── ...
+    │   ├── ...
+    ├── ...
+>_data set structure_
+
+    x y y y
+      z z z
+      z z z
+      z z z
+>_formatting of a sensor measurement_
+
+We've stored the raw and converted data in the same place. This is for the sake of simplicity and easy retrieval. We 
+still use the raw data for visualizing the patient's movement. SHOULD REMOVE[My contributions towards the visualizations 
+was quite minimal, apart from offering help when someone was stuck. I did save the absolute path to the raw data files 
+in their respective 'Exercise' object.]
+
 ### Conversion
 The majority of the initial data conversion is done by [Eddie Versluis](https://github.com/v3rslu1s). Therefor I won't 
 go into detail about it too much. I did however put the majority of the effort into 
 [converting patient group 4](#patient-group-4) which will be discussed later in this portfolio.
+
+### Converted data
+LALALAY
+
+### Labels
 
 ## Reproducing results
 Unlike the other groups we had an already quite promising result created by the group who worked on this project last 
@@ -113,35 +147,6 @@ His was easier to understand and produced results just as good.
 ## Contributions
 We've tried several ideas and techniques to improve the results of the machine learning model. In this chapter I 
 will elaborate further on the contributions I've made towards the project, and how they impacted the final product. 
-
-### Raw data
-In our project we made a distinct division between the raw and converted (euler angle) data. The structure of 
-our data set is as follows
-
-    ├── Category_1
-    │   ├── 1
-    │   │   ├── AB1.csv
-    │   │   ├── AB1.txt
-    │   │   ├── AB2.csv
-    │   │   ├── AB2.txt
-    │   │   ├── AF1.csv
-    │   │   ├── AF1.txt
-    │   │   ├── AF2.csv
-    │   │   ├── ...
-    │   ├── ...
-    ├── ...
->_data set structure_
-
-    x y y y
-      z z z
-      z z z
-      z z z
->_formatting of a sensor measurement_
-
-We've stored the raw and converted data in the same place. This is for the sake of simplicity and easy retrieval. We 
-still use the raw data for visualizing the patient's movement. My contributions towards the visualizations was quite 
-minimal, apart from offering help when someone was stuck. I did save the absolute path to the raw data files in their 
-respective 'Exercise' object.
 
 ## Data conversion
 As stated earlier the data we received from the LUMC was raw sensor data output from the flock of birds sensor. This 
