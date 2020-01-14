@@ -116,11 +116,16 @@ need to create multiple objects like patient group and patient, since all this d
 the collection which contains these objects. For a complete overview of the overview of the data retrieval see the 
 figures below
 
+<details>
+    <summary>diagrams</summary>
+
 ![visual](resources/reproduce_results/load_files.png)
 >_loading the files into memory_
 
 ![uml](resources/reproduce_results/load_files_uml.png)
 >_uml diagram of data loading_
+</details>
+<br>
 
 After loading all the data into memory we'd have to prepare it to feed it into a machine learning model. Since we were 
 reproducing a result to verify it's integrity we went the same route for this as the previous group did. This meant 
@@ -217,6 +222,9 @@ within that patient group showed no coherency whatsoever. This was quite strange
 year didn't seem to be having this issue. The data set stayed the same, minus us having to convert the data ourselves. 
 So we'd expect there to be no issues with this.
 
+<details>
+    <summary>tsne plots</summary>
+
 ![tsne plot 1-4](resources/contributions/pat_conversion/cat4_initial.png)
 >_tsne plot category 1-4 newly converted data_
 
@@ -225,6 +233,8 @@ So we'd expect there to be no issues with this.
 
 ![tsne plot 1-4](resources/contributions/pat_conversion/cat1-4_old.png)
 >_tsne plot category 1-4 data used by project group of last year_
+</details>
+<br>
 
 Using the figures above we can conclude that patient group is indeed the problem. This problem was not found in the 
 old data set. Therefor we started looking into any mistakes we might have made during the conversion process.
@@ -306,6 +316,7 @@ apply all our data enrichment (remove idle before and after an exercise, etc.), 
 ![data manger uml](resources/contributions/managers/data/data_manager_uml.png)
 >_UML diagram of the data manger_
 </details>
+<br>
 
 This solved the issue of not being able to run multiple configurations one after the other. After creating this we were 
 able to run multiple configurations and figure out which one results in the best.
