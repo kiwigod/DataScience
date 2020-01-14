@@ -110,7 +110,19 @@ go into detail about it too much. I did however put the majority of the effort i
 [converting patient group 4](#patient-group-4) which will be discussed later in this portfolio.
 
 ### Converted data
-LALALAY
+The converted data with added header looks as follows
+
+thorax_r_x_ext|thorax_r_y_ax|thorax_r_z_lat|clavicula_r_y_pro|clavicula_r_z_ele|clavicula_r_x_ax|scapula_r_y_pro|scapula_r_z_lat|scapula_r_x_tilt|humerus_r_y_plane|humerus_r_z_ele|humerus_r_y_ax|ellebooghoek_r|thorax_l_x_ext|thorax_l_y_ax|thorax_l_z_lat|clavicula_l_y_pro|clavicula_l_z_ele|clavicula_l_x_ax|scapula_l_y_pro|scapula_l_z_lat|scapula_l_x_tilt|humerus_l_y_plane|humerus_l_z_ele|humerus_l_y_ax|ellebooghoek_l
+---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---
+7.716094e+00|-3.462766e+00|-1.460404e+00|-1.630342e+01|1.095165e+01|-6.899586e+00|2.434166e+01|-1.062997e+01|-2.071014e+01|-3.373870e+01|1.394120e+01|5.210408e+01|3.976150e+02|7.716094e+00|3.462766e+00|1.460404e+00|-2.192275e+01|1.037888e+01|-7.964620e+00|1.938317e+01|-1.318752e+01|-1.907376e+01|-2.112837e+01|1.462810e+01|5.254767e+01|4.050066e+02
+7.622684e+00|-3.447406e+00|-1.453711e+00|-1.644224e+01|1.135854e+01|-6.791136e+00|2.434561e+01|-1.060261e+01|-2.061820e+01|-3.266545e+01|1.382708e+01|5.088468e+01|3.969477e+02|7.622684e+00|3.447406e+00|1.453711e+00|-2.174569e+01|1.043017e+01|-7.904142e+00|1.941585e+01|-1.314481e+01|-1.898729e+01|-2.067755e+01|1.465190e+01|5.209330e+01|4.048996e+02
+8.214207e+00|-2.937460e+00|-1.189491e+00|-1.610064e+01|1.172630e+01|-8.231244e+00|2.371940e+01|-1.118295e+01|-2.097882e+01|-3.633161e+01|1.378239e+01|5.398188e+01|3.997662e+02|8.214207e+00|2.937460e+00|1.189491e+00|-2.050971e+01|1.130783e+01|-8.994802e+00|1.979399e+01|-1.312111e+01|-1.962676e+01|-2.142451e+01|1.511340e+01|5.345148e+01|4.062212e+02
+>_First three lines of category 1, patient 1, exercise AB_
+
+One value in particular is quite strange - the elbow angle. In all the three data samples above it hovers around the 
+400. This is pretty unbelievable since one would have to break his elbows to move it much further than 180 degrees. 
+Even considering the euler angles it doesn't seem right compared to the data from the other sensors; The value is 
+simply too big. We therefor decided to mostly ignore this value in our training and evaluation. 
 
 ### Labels
 
@@ -454,7 +466,8 @@ Commit|Datestamp|Refs|Message
 
 ---
 
-Furthermore the tasks assigned to me on the scrum board can be found below
+Furthermore the tasks assigned to me on the scrum board can be found below. Most tasks I did were on the scrum board, 
+however I might not have moved all tasks to done when appropriate.
 
 ID|Title|State|Area Path|Comment Count|Changed Date
 ---|---|---|---|---|---
