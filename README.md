@@ -72,6 +72,18 @@ this data set we could say with certainty which exercise a patient was performin
 by the project group last year. The only downside to the newly received data set is that we'd have to convert the 
 data ourselves to euler angles in matlab using the provided scripts.
 
+### Labels
+The data set used by the previous group didn't contain a lot of certainty regarding the categorization of the exercises. 
+Their set was categorized in patient groups, which contained the files for all patient within that category. However 
+their exercises were anonymized, meaning they couldn't tell with certainty which exercise was being performed. To 
+circumvent this they looped through each of the exercises, plotted it, and determined by hand in which self made 
+category they could place it. This led them to five different exercises within their data set.
+
+In our case we received raw data from the flock of birds system and have to convert them in matlab to euler angels. One 
+of the advantages this data set has is the labeled exercises. We won't have to speculate about which exercise is being 
+performed by a patient. As an added bonus we can visualize the raw data files to map out what a certain exercise 
+looks like.
+
 ### Raw data
 In our project we made a distinct division between the raw and converted (euler angle) data. The structure of 
 our data set is as follows
@@ -123,8 +135,6 @@ One value in particular is quite strange - the elbow angle. In all the three dat
 400. This is pretty unbelievable since one would have to break his elbows to move it much further than 180 degrees. 
 Even considering the euler angles it doesn't seem right compared to the data from the other sensors; The value is 
 simply too big. We therefor decided to mostly ignore this value in our training and evaluation. 
-
-### Labels
 
 ## Reproducing results
 Unlike the other groups we had an already quite promising result created by the group who worked on this project last 
