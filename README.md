@@ -362,7 +362,7 @@ LALALAY
 }
 ```
 
-These are the evaluation metrics for the [best configuration](resources\results\conf.json) ran.
+These are the evaluation metrics for the [best configuration](resources/results/conf.json) ran.
 
 ## Evaluation
 In the end I believe we did well. We managed to create an approach which is based on factual data provided by the 
@@ -381,7 +381,7 @@ of the most non-intrusive ways to determine the severity of a patient's shoulder
 features an anatomically correct skeleton for each partial or full body in FOV. This means data similar to what 
 is currently being recorded in the LUMC using the flock of birds system should be recordable using this approach as well.
 
-![Azue kinect sdk](resources\evaluation\azue_kinect_dk.jpg)
+![Azue kinect sdk](resources/evaluation/azure_kinect_dk.jpg)
 
 ## Conclusion
 
