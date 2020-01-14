@@ -299,11 +299,12 @@ apply all our data enrichment (remove idle before and after an exercise, etc.), 
 
 <details>
     <summary>diagrams</summary>
-    ![data manager flow](resources/contributions/managers/data/data_manager.png)
-    >_Data flow of the data manager_
 
-    ![data manger uml](resources/contributions/managers/data/data_manager_uml.png)
-    >_UML diagram of the data manger_
+![data manager flow](resources/contributions/managers/data/data_manager.png)
+>_Data flow of the data manager_
+
+![data manger uml](resources/contributions/managers/data/data_manager_uml.png)
+>_UML diagram of the data manger_
 </details>
 
 This solved the issue of not being able to run multiple configurations one after the other. After creating this we were 
