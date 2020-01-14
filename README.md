@@ -357,8 +357,6 @@ non-intrusive ways to determine the severity of a patient's shoulder disability.
 
 ## Conclusion
 
-## Recommendations
-
 ## Proof of contributions
 The proof on contributions in generated using `git log --author='yuqi' --all`. I believe most of my contributions are 
 committed from my own machine. Thus back traceable using the command above.
