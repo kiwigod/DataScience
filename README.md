@@ -96,6 +96,9 @@ our data set is as follows
       z z z
 >_formatting of a sensor measurement_
 
+Where 'x' is the sensor number, 'y' is a static value per patient, and 'z' forms a 3x3 matrix transcribing 
+the patient's movement.
+
 We've stored the raw and converted data in the same place. This is for the sake of simplicity and easy retrieval. We 
 still use the raw data for visualizing the patient's movement. SHOULD REMOVE[My contributions towards the visualizations 
 was quite minimal, apart from offering help when someone was stuck. I did save the absolute path to the raw data files 
@@ -324,6 +327,7 @@ following is possible:
 This solved the issue of not being able to dynamically specify the test and train set.
 
 ### CNN data generation
+LALALAY
 
 ## Results
     "Accuracy": 0.6959537572254335,
@@ -335,6 +339,21 @@ This solved the issue of not being able to dynamically specify the test and trai
 These are the evaluation metrics for the [best configuration](resources\results\conf.json) ran.
 
 ## Evaluation
+In the end I believe we did well. We managed to create an approach which is based on factual data provided by the 
+LUMC. Therefor there was no need to make any assumptions, contradicting the project group from last year. They had 
+to categorize the exercises themselves.
+
+Assuming no changes are made in the way recordings are made, thus keeping the flock of birds system around. A 
+suggestion could be to further expand upon the convolutional neural network (cnn). We've had some promising results 
+with this, but weren't able to fully utilize it; The results weren't optimal yet. The layers of the model could 
+quite likely be improved to increase it's reliability.
+
+If one would were to make new recordings there are multiple possibilities. One of these possibilities could be 
+using the kinect camera again. Microsoft has announced and released a new iteration of this last year (2019) which 
+features body tracking among other improvements. This would be ideal within our application and one of the most 
+non-intrusive ways to determine the severity of a patient's shoulder disability.
+
+![Azue kinect sdk](resources\evaluation\azue_kinect_dk.jpg)
 
 ## Conclusion
 
