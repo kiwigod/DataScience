@@ -312,6 +312,41 @@ By interpreting the UML diagram above we see the
 multiple implementations. Each of these implementations is unique in its own way, and each deliver a different result. 
 All of them can be chained although running the same processor multiple times is kind of pointless. The only caveat is 
 the combination processor. This processor needs to be run before all others to ensure the data is grouped properly.
+The test cases for all processors can be found below.
+
+<details>
+    <summary>test cases</summary>
+functionality test processor units
+
+- combinations
+    - Assuming patient 18 from category 1 is sent through the processor, the result using all exercisegroups
+      should be 32. This is because each exercise is performed twice (2^5 = 32)
+
+    - Creating combinations dynamically based on the exercisegroups attribute in the config. We need to verify
+      if the result of a dynamically built combination is the same as a fixed combination. ie. do the following
+      two lines produce the same result assuming all exercisegroups are set to active:
+          - list(itertools.product(*[patient_data[ex_group] for ex_group in self.config.exercisegroups]))
+          - list(itertools.product(patient_data['AF'], patient_data['EL'], patient_data['AB'], patient_data['RF'], patient_data['EH']))
+
+- finalize
+    - Assuming patient 18 from category 1 is sent through the processor, the result should be a numpy array
+      with (32, 650) as shape (see explanation for 32 in combinations functionality test case)
+
+- frame_generator
+    - Assuming patient 18 from category 1 is sent through the processor, frame_generator_count is set to 5, and all columns
+      are used. The output shape should be the equivalent of (160, 650)
+
+- train_test split
+    - Assuming the default data finalization processor is used (finalize). The output shape of the create_split function
+      should be along these lines (x, 650), (x,), (y, 650), (y,))
+
+    - The values in the train and test set should be back traceable to the output of the processors. Traceback patient 18
+      from category 1, and check whether the output of the processor is equivalent to the data in the train or test set.
+
+    - Assuming the default data finalization processor is used (finalize), and shuffle_train is enabled. The train tuple
+      shape should stay the same. Ie. the shape before shuffling is ((x, 650), (x,)) it must stay the same afterwards.
+
+</details>
 
 ### Split manager
 Along with the data manager a [split manager](resources/contributions/managers/test/source/train_test.py) was created. 
