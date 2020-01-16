@@ -1,5 +1,6 @@
 # DataScience
 Arjun Sardjoe Missier - 15052907
+Minor: ITD-KB-74-1-18
 
 ## Introduction
 This portfolio describes my achievements as well as my contributions towards the project. 
