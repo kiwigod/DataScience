@@ -443,7 +443,12 @@ following is possible:
 This solved the issue of not being able to dynamically specify the test and train set.
 
 ### CNN data generation
-LALALAY
+Together with [Hassan](https://github.com/Hassanyare/Minor_Applied_Data_Science) we worked on creating a cnn model 
+to classify the patients. I primarily worked on creating the data we'd train the model on. The following data 
+preparations are [implemented](https://dev.azure.com/DataScienceMinor/Data%20Science/_git/Data%20Science/commit/d183bed4303c542e00cf902ddc34b9e8abb4690d):
+- Fixed exercise length
+- Unique identifier per bone
+- Motion velocity
 
 ### Paper
 I've mainly written the parts that I've personally worked on since I have the most knowledge about these subjects. 
