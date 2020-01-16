@@ -222,8 +222,8 @@ conversion.
 ### Matlab script
 The first thing I had to do was understand how the matlab script operated. Since I never worked with matlab it was 
 quite challenging. Eventually I figured out that most of the relevant processing is done within a file called 
-"dat2m_FV.m". This file calibrates the sensor data against a predefined calibration file. This calibration file 
-is dependant on the room in which the system is located.
+"[dat2m_FV.m](resources/contributions/dat2m_FV.m)". This file calibrates the sensor data against a predefined 
+calibration file. This calibration file is dependant on the room in which the system is located.
 
 It seems there are two calibration files, presumably the flock of birds system was moved at some point. However 
 we only received one calibration file. This could pose a problem since we don't know when the recordings of our data 
@@ -289,6 +289,8 @@ within that patient group showed no coherency whatsoever. This was quite strange
 year didn't seem to be having this issue. The data set stayed the same, minus us having to convert the data ourselves. 
 So we'd expect there to be no issues with this. In the end we did decide to not make use of this patient group because 
 there was no feasible way to verify its [integrity](#data-verification).
+
+All scripts used within this section can be found on the [results reproduction repository](https://github.com/kiwigod/ortho/tree/master/scripts).
 
 <details>
     <summary>tsne plots</summary>
