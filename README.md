@@ -13,6 +13,14 @@ on which we're training and generating predictions.
 Based on this information we formulated our research question to be as follows 
 >_"To what extend and in what way, can different supervised data science techniques be used on kinematic recordings to contribute to a more valid and more reliable diagnosis, made by a doctor, on shoulder disability."_
 
+The sub questions are set up as follows
+> - What datascience techniques should we use? 
+> - How can kinematic recordings be reshaped(organized) into a valid/reliable data set. 
+> - What other datascience techniques could we use and (how) can they improve the classification 
+> - What parts of the kinematic recordings are contributing? 
+> - Do we validate the reliability of the diagnosis the Datacience techniques made. 
+> - How is our outcome contributing to the medical domain?(classification/research) 
+
 ## Table of contents
 - [Datacamp](#datacamp)
 - [Data set](#data-set)
@@ -173,7 +181,7 @@ During this project we've mostly used logistic regression. In this chapter a fur
 we've made use of this technique.
 
 ### Why
-The main reason for why we picked logistic regression is because this was used by the project group of last year 
+The main reason for why we picked logistic regression is because this was [used by the project group of last year](https://github.com/Lukelumia/Applied-Data-Science/blob/master/paper_ortho_eyes.pdf) 
 as well. This is obviously not sufficient of a reason, they could've made a mistake.
 
 The main reason the pick a classifier over a regression model is because we're trying to predict to which class 
@@ -181,7 +189,8 @@ a data point belongs to. Since we're working with more than two classes we've to
 regression.
 
 ### Configuration
-When initializing our machine learning model we've opted to use the following parameters.
+When initializing our machine learning model we've opted to use the following parameters. The explanations are 
+retrieved from the [sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
 Parameter | Value | Explanation | Reasoning
 --- | --- | --- | ---
@@ -274,7 +283,8 @@ our project, and having more data available is always better!
 One of the issues we seemed to be having after the initial data conversion was related to patient group 4. The data 
 within that patient group showed no coherency whatsoever. This was quite strange since the project group of last 
 year didn't seem to be having this issue. The data set stayed the same, minus us having to convert the data ourselves. 
-So we'd expect there to be no issues with this.
+So we'd expect there to be no issues with this. In the end we did decide to not make use of this patient group because 
+there was no feasible way to verify its [integrity](#data-verification).
 
 <details>
     <summary>tsne plots</summary>
@@ -465,6 +475,21 @@ is currently being recorded in the LUMC using the flock of birds system should b
 ![Azure kinect sdk](resources/evaluation/azure_kinect_dk.jpg)
 
 ## Conclusion
+#### What datascience techniques should we use?
+In this project we made use of logistic regression based on the results of the project group whom worked on this project 
+last year. For a more thorough explanation please refer to "[why we picked this model](#why)". 
+
+#### Do we validate the reliability of the diagnosis the datacience techniques made?
+Unlike the project group whom worked on this project last year we don't have to make [assumptions](#labels) about which 
+exercise a patients is performing. Because of this they had to make an educated guess on which exercise is being 
+performed by said patient. The data set we received contained labels indicating which exercise a data file correlates 
+to.
+
+#### How is our outcome contributing to the medical domain?(classification/research)
+Using the trained model a diagnosis for a patient can be made with up to [70% percent accuracy](#results). However, 
+the diagnosis can only be made if the patient belongs in patient group 1 - 3, since we left out 
+[patient group 4](#patient-group-4). In one of the meetings with the LUMC we confirmed that an accuracy equals to 
+or higher than 70% is desired. Which does make our contribution meaningful in the medical domain.
 
 ## Proof of contributions
 The proof on contributions in generated using `git log --author='yuqi' --all`. I believe most of my contributions are 
