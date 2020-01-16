@@ -625,11 +625,11 @@ Calibration of the “Flock of Birds” electromagnetic tracking device and its 
 
 ## Presentations
 I presented and/or contributed towards the following presentations
-- [External 1](https://dehaagsehogeschool-my.sharepoint.com/:p:/g/personal/19132565_student_hhs_nl/ETasmawQUflKlnrCcJ2gQSQBvmOvDZmdIikdY7Z9w2wvhQ?e=HApMbH)
-- [Week 11 | 18 November](https://dehaagsehogeschool-my.sharepoint.com/:p:/g/personal/19132565_student_hhs_nl/EWpjZddvGttMgWaJVYdXwGYBeOENDjFWd-1NVSs_gZV22w?e=Qw1ooA)
-- [Week 14 | 16 December](https://dehaagsehogeschool-my.sharepoint.com/:p:/g/personal/19132565_student_hhs_nl/EZZGNqrN6ItMmVBhbVP4W6gBKBtVIwCSFHikUJW7w0yXRA?e=Q5ul5M)
+- [External 1](resources/presentations/external_1.pdf)
+- [Week 11 | 18 November](resources/presentations/week_11.pdf)
+- [Week 14 | 16 December](resources/presentations/week_14.pdf)
 
-Within the project group we also did a presentation to share knowledge. Which can be found [here](https://dehaagsehogeschool-my.sharepoint.com/:b:/g/personal/19132565_student_hhs_nl/ET85TZN-LUZFsLATVPHWFKUBDPsRSdUpyvANrJlsKRnmdw?e=ZzNBwM).
+Within the project group we also did a presentation to share knowledge. Which can be found [here](resources/presentations/group_internal.pdf).
 My presentation wasn't really in depth about the project, but more or less a overview of what changes we 
 could make in the codebase. The aim was to increase flexibility in the code, and not creating code which 
 is tailored towards one specific use case.
