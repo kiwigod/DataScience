@@ -461,11 +461,6 @@ A contribution has been made to the following parts of the paper:
 
 Overall I've also helped with updating the grammar where necessary, and rewriting a few drafts.
 
-<details style="visibility:hidden">
-However, I don't understand why this paragraph is necessary. Isn't the paper supposed to be a group effort? Why 
-is the mark of one's portfolio influenced by his/her contributions to the paper?
-</details>
-
 ## Results
 ```python
 {
