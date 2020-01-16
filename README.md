@@ -454,9 +454,9 @@ LALALAY
 ```
 
 These are the evaluation metrics for the [best configuration](resources/results/conf.json) ran. The RMSE isn't too 
-low meaning we aren't overfitting (connecting the dots). Also the MCC is based on the confusion matrix of the 
-trained model, it does account for the difference in class size. Therefor we can say that the model's prediction 
-over all classes is quite good. 
+low meaning we aren't overfitting (connecting the dots). Also the [MCC](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.matthews_corrcoef.html) 
+is based on the confusion matrix of the trained model, it does account for the difference in class size. Therefor we 
+can say that the model's prediction over all classes is quite good.
 
 ## Evaluation
 In the end I believe we did well. We managed to create an approach which is based on factual data provided by the 
