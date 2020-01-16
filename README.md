@@ -29,6 +29,10 @@ The sub questions are set up as follows
     - [Conversion](#conversion)
     - [Converted data](#converted-data)
 - [Reproducing results](#reproducing-results)
+- [Model choice](#model)
+    - [Choice explanation](#why)
+    - [Model configuration](#model-configuration)
+    - [Evaluation](#model-evaluation)
 - [Contributions](#contributions)
     - [Data conversion](#data-conversion)
         - [Matlab script](#matlab-script)
@@ -43,15 +47,14 @@ The sub questions are set up as follows
         - [Processors](#processors)
     - [Split manager](#split-manager)
     - [CNN data generation](#cnn-data-generation)
+    - [Paper](#paper)
 - [Results](#results)
 - [Evaluation](#evaluation)
 - [Conclusion](#conclusion)
 - [Proof of contribution](#proof-of-contribution)
+- [Bibliography](#bibliography)
 - [Presentations](#presentations)
 - [Reflections](#reflections)
-    - [Individual reflection](#individual-reflection)
-    - [Learning objectives reflection](#objectives-reflection)
-    - [Project group reflection](#group-reflection)
 
 ## Datacamp
 A complete overview of all datacamp proof of accomplishments can be found [here](resources/datacamp). For completion all 
@@ -188,7 +191,7 @@ The main reason the pick a classifier over a regression model is because we're t
 a data point belongs to. Since we're working with more than two classes we've to resort to multivariate logistic 
 regression.
 
-### Configuration
+### Model configuration
 When initializing our machine learning model we've opted to use the following parameters. The explanations are 
 retrieved from the [sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
@@ -198,7 +201,7 @@ solver | lbgfs | For multiclass problems, only ‘newton-cg’, ‘sag’, ‘sa
 max_iter | 2000 | Maximum number of iterations taken for the solvers to converge. | The default value is 100, but the solver didn't converge with that value. Raising this value removed the no converge warning
 multi_class | auto | If the option chosen is ‘ovr’, then a binary problem is fit for each label. For ‘multinomial’ the loss minimised is the multinomial loss fit across the entire probability distribution, even when the data is binary. ‘multinomial’ is unavailable when solver=’liblinear’. ‘auto’ selects ‘ovr’ if the data is binary, or if solver=’liblinear’, and otherwise selects ‘multinomial’. | auto is the default value in sklearn, the other two options are 'ovr' and 'multinomial'. From the explanation we can conclude ovr cannot be used since the data isn't binary, neither have we set the solver to 'liblinear'. Thus auto sets the value to 'multinomial'
 
-### Evaluation
+### Model evaluation
 We evaluated the model using a train- and test-set split. This is done by randomly defining the patients per patient 
 group in the configuration file, this will [generate the test-set](https://dev.azure.com/DataScienceMinor/Data%20Science/_git/Data%20Science/commit/7244b5d7b2f267c52d4ff5e5723d87904139e645). Testing the trained model with 
 this set then returns several machine learning metrics, like accuracy, from which we can determine if the model is 
