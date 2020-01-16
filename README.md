@@ -587,6 +587,16 @@ ID|Title|State|Area Path|Comment Count|Changed Date
 14|Arjun|Done|Data Science|0|Fri Sep 06 2019 14:01:37Z
 </details>
 
+## Bibliography
+There weren't a lot of papers related to machine learning and shoulder disabilities. We did manage to make use 
+of the following papers
+<div style="width:10em">Title</div> | <div style="width:15em">Author(s)</div> | Reference
+--- | --- | ---
+Kinematic analysis of shoulder motion for diagnostic purposes | K. van der Hoofd, L. van de Keijzer, V. van den Oord, R. Zitman, T. Andrioli | https://github.com/Lukelumia/Applied-Data-Science/blob/master/paper_ortho_eyes.pdf
+Calibration of the “Flock of Birds” electromagnetic tracking device and its application in shoulder motion studies | C.G.M.Meskers, H.Fraterman, F.C.T.van der Helm, H.M.Vermeulen, P.M.Rozing | https://www.sciencedirect.com/science/article/abs/pii/S0021929099000111
+3D shoulder position measurements using a six-degree-of-freedom electromagnetic tracking device | C.G.M.Meskers, H.M.Vermeulen, J.H.de Groot, F.C.T.van der Helm, P.M.Rozing | https://www.sciencedirect.com/science/article/abs/pii/S0268003398000953
+
+
 ## Presentations
 I presented and/or contributed towards the following presentations
 - [External 1](https://dehaagsehogeschool-my.sharepoint.com/:p:/g/personal/19132565_student_hhs_nl/ETasmawQUflKlnrCcJ2gQSQBvmOvDZmdIikdY7Z9w2wvhQ?e=HApMbH)
