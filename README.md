@@ -189,6 +189,12 @@ solver | lbgfs | For multiclass problems, only ‘newton-cg’, ‘sag’, ‘sa
 max_iter | 2000 | Maximum number of iterations taken for the solvers to converge. | The default value is 100, but the solver didn't converge with that value. Raising this value removed the no converge warning
 multi_class | auto | If the option chosen is ‘ovr’, then a binary problem is fit for each label. For ‘multinomial’ the loss minimised is the multinomial loss fit across the entire probability distribution, even when the data is binary. ‘multinomial’ is unavailable when solver=’liblinear’. ‘auto’ selects ‘ovr’ if the data is binary, or if solver=’liblinear’, and otherwise selects ‘multinomial’. | auto is the default value in sklearn, the other two options are 'ovr' and 'multinomial'. From the explanation we can conclude ovr cannot be used since the data isn't binary, neither have we set the solver to 'liblinear'. Thus auto sets the value to 'multinomial'
 
+### Evaluation
+We evaluated the model using a train- and test-set split. This is done by randomly defining the patients per patient 
+group in the configuration file, this will [generate the test-set](https://dev.azure.com/DataScienceMinor/Data%20Science/_git/Data%20Science/commit/7244b5d7b2f267c52d4ff5e5723d87904139e645). Testing the trained model with 
+this set then returns several machine learning metrics, like accuracy, from which we can determine if the model is 
+under- or overfitting.
+
 ## Contributions
 We've tried several ideas and techniques to improve the results of the machine learning model. In this chapter I 
 will elaborate further on the contributions I've made towards the project, and how they impacted the final product. 
