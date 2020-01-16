@@ -168,6 +168,27 @@ In verdict my approach in reproducing the results might have been the fastest, b
 peers with less computer programming experience. Therefor we decided to use a peer's project as base to build upon. 
 His was easier to understand and produced results just as good.
 
+## Model
+During this project we've mostly used logistic regression. In this chapter a further explanation for why and how 
+we've made use of this technique.
+
+### Why
+The main reason for why we picked logistic regression is because this was used by the project group of last year 
+as well. This is obviously not sufficient of a reason, they could've made a mistake.
+
+The main reason the pick a classifier over a regression model is because we're trying to predict to which class 
+a data point belongs to. Since we're working with more than two classes we've to resort to multivariate logistic 
+regression.
+
+### Configuration
+When initializing our machine learning model we've opted to use the following parameters.
+
+Parameter | Value | Explanation | Reasoning
+--- | --- | --- | ---
+solver | lbgfs | For multiclass problems, only ‘newton-cg’, ‘sag’, ‘saga’ and ‘lbfgs’ handle multinomial loss; ‘liblinear’ is limited to one-versus-rest schemes. | Since we're dealing with a multiclass problem, we've opted for 'lbgfs'
+max_iter | 2000 | Maximum number of iterations taken for the solvers to converge. | The default value is 100, but the solver didn't converge with that value. Raising this value removed the no converge warning
+multi_class | auto | If the option chosen is ‘ovr’, then a binary problem is fit for each label. For ‘multinomial’ the loss minimised is the multinomial loss fit across the entire probability distribution, even when the data is binary. ‘multinomial’ is unavailable when solver=’liblinear’. ‘auto’ selects ‘ovr’ if the data is binary, or if solver=’liblinear’, and otherwise selects ‘multinomial’. | auto is the default value in sklearn, the other two options are 'ovr' and 'multinomial'. From the explanation we can conclude ovr cannot be used since the data isn't binary, neither have we set the solver to 'liblinear'. Thus auto sets the value to 'multinomial'
+
 ## Contributions
 We've tried several ideas and techniques to improve the results of the machine learning model. In this chapter I 
 will elaborate further on the contributions I've made towards the project, and how they impacted the final product. 
