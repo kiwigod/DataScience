@@ -594,7 +594,7 @@ of the following papers
 --- | --- | ---
 Kinematic analysis of shoulder motion for diagnostic purposes | K. van der Hoofd, L. van de Keijzer, V. van den Oord, R. Zitman, T. Andrioli | https://github.com/Lukelumia/Applied-Data-Science/blob/master/paper_ortho_eyes.pdf
 Calibration of the “Flock of Birds” electromagnetic tracking device and its application in shoulder motion studies | C.G.M.Meskers, H.Fraterman, F.C.T.van der Helm, H.M.Vermeulen, P.M.Rozing | https://www.sciencedirect.com/science/article/abs/pii/S0021929099000111
-3D shoulder position measurements using a six-degree-of-freedom electromagnetic tracking device | C.G.M.Meskers, H.M.Vermeulen, J.H.de Groot, F.C.T.van der Helm, P.M.Rozing | https://www.sciencedirect.com/science/article/abs/pii/S0268003398000953
+3D shoulder position measurements using a six-degree-of-freedom electromagnetic tracking device | C.G.M.Meskers, H.M.Vermeulen, J.H. de Groot, F.C.T.van der Helm, P.M.Rozing | https://www.sciencedirect.com/science/article/abs/pii/S0268003398000953
 
 
 ## Presentations
@@ -609,5 +609,4 @@ could make in the codebase. The aim was to increase flexibility in the code, and
 is tailored towards one specific use case.
 
 ## Reflections
-I believe a reflection should be confidential and thus not shared on a publicly accessible portfolio. I'll therefor 
-add them as an attachment when handing in the portfolio.
+The reflections can be found in a [seperate file](reflections.md)
