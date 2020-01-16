@@ -442,6 +442,19 @@ This solved the issue of not being able to dynamically specify the test and trai
 ### CNN data generation
 LALALAY
 
+### Paper
+I've mainly written the parts that I've personally worked on since I have the most knowledge about these subjects. 
+A contribution has been made to the following parts of the paper:
+- Data received from the LUMC, and conversion of this data
+- Patient group 4, and why we're not using this data
+
+Overall I've also helped with updating the grammar where necessary, and rewriting a few drafts.
+
+<details style="visibility:hidden">
+However, I don't understand why this paragraph is necessary. Isn't the paper supposed to be a group effort? Why 
+is the mark of one's portfolio influenced by his/her contributions to the paper?
+</details>
+
 ## Results
 ```python
 {
